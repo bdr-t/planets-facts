@@ -23,6 +23,7 @@ body {
   margin: 0;
   font-family: ${theme.fonts.primary};
   font-size: 0.875 rem;
+  color:white;
 }
 
 /* *
@@ -40,7 +41,7 @@ main {
 
 h1 {
   font-size: 2em;
-  margin: 0.67em 0;
+  margin: 0 0;
 }
 
 /* Grouping content
