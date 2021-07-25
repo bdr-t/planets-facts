@@ -1,11 +1,14 @@
 import styled from "styled-components";
-import theme from "../../theme"
+import theme from "../../theme";
+import { RiMenuFill } from "react-icons/ri";
 
-export const Nav = styled.div`
+export const NavContainer = styled.div`
   padding: 16px 24px;
   border-bottom: 1px solid ${theme.colors.darkGray};
   grid-area: 1 / 1 / 2 / 3;
-  
+  @media (min-width: 768px) {
+    padding: 32px 24px 27px 24px;
+  }
 `;
 
 export const Flex = styled.div`
@@ -17,5 +20,40 @@ export const Flex = styled.div`
     font-size: 28px;
     font-family: "Antonio", sans-serif;
     letter-spacing: -1.05px;
+  }
+
+  @media (min-width: 768px) {
+    justify-content: center;
+    flex-direction: column;
+    height: 100px;
+  }
+`;
+
+export const HamIcon = styled(RiMenuFill)`
+  width: 30px;
+  height: 30px;
+  @media (min-width: 768px) {
+    display: none;
+  }
+`;
+
+export const Nav = styled.nav`
+  display: none;
+  @media (min-width: 768px) {
+    display: block;
+    ul {
+      margin-top: 40px;
+      display: flex;
+      gap: 32px;
+    }
+
+    li {
+      font-size: 0.6857rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      line-height: 25px;
+      letter-spacing: 1px;
+      color: ${theme.colors.whiteAlpha75};
+    }
   }
 `;

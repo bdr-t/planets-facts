@@ -1,8 +1,8 @@
-import { ConentDiv, MoreInfoDiv, ExternalIcon } from "./Content.styles";
+import {Container, ConentDiv, MoreInfoDiv, ExternalIcon } from "./Content.styles";
 
 const Content = () => {
   return (
-    <div style={{ width: "100%" }}>
+    <Container>
       <ConentDiv>
         <h1>Earth</h1>
         <div style={{ maxWidth: "500px", margin: "0 auto" }}>
@@ -22,7 +22,7 @@ const Content = () => {
           </a>
         </MoreInfoDiv>
       </ConentDiv>
-    </div>
+    </Container>
   );
 };
 

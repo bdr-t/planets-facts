@@ -11,4 +11,14 @@ export const ImgDiv = styled.div`
     max-width: 10.8125rem;
     max-height: 10.8125rem;
   }
+
+  @media (min-width: 768px){
+    height: 480px;
+    img {
+    max-width: 285px;
+    max-height: 285px;
+  }
+  }
+
+
 `;

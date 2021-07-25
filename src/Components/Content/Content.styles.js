@@ -2,7 +2,11 @@ import styled from "styled-components";
 import { FaExternalLinkSquareAlt } from "react-icons/fa";
 import theme from "../../theme";
 
-
+export const Container = styled.div`
+  @media (min-width: 768px) {
+    grid-area: 3 / 1;
+  }
+`;
 export const ConentDiv = styled.div`
   padding: 0 1.5rem;
   margin-bottom: 1.75rem;
@@ -22,11 +26,20 @@ export const ConentDiv = styled.div`
     font-size: 0.6875rem;
     color: ${theme.colors.whiteAlpha75};
     margin-bottom: 10px;
+  }
 
+  @media (min-width: 768px) {
+    padding: 0 0 0 40px;
+    h1{
+      text-align: start;
+      font-size: 48px;
+      margin-bottom: 1.5rem;
+    }
+    p{
+      text-align: start;
+    }
   }
 `;
-
-export const Text = styled.div``;
 
 export const MoreInfoDiv = styled.div`
   display: flex;
@@ -50,6 +63,11 @@ export const MoreInfoDiv = styled.div`
     display: flex;
     gap: 5px;
     align-items: center;
+  }
+
+  @media (min-width: 768px){
+    justify-content: flex-start;
+    margin-top: 30px;
   }
 `;
 

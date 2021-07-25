@@ -1,11 +1,34 @@
-import { Flex, ButtonActive, ButtonInactive } from "./Menu.styles";
+import {
+  Flex,
+  ButtonActive,
+  ButtonInactive,
+  MobileText,
+  DesktopText,
+} from "./Menu.styles";
 
 const Menu = () => {
   return (
     <Flex>
-      <ButtonActive> OVERVIEW </ButtonActive>
-      <ButtonInactive> STRUCTURE </ButtonInactive>
-      <ButtonInactive> SURFACE </ButtonInactive>
+      <ButtonActive>
+        <MobileText>OVERVIEW</MobileText>
+        <DesktopText>
+          <span>01</span> OVERVIEW
+        </DesktopText>
+      </ButtonActive>
+
+      <ButtonInactive>
+        <MobileText>STRUCTURE</MobileText>
+        <DesktopText>
+          <span>02</span> INTERNAL STRUCTURE
+        </DesktopText>
+      </ButtonInactive>
+      
+      <ButtonInactive>
+        <MobileText>SURFACE</MobileText>
+        <DesktopText>
+          <span> 03</span> SURFACE GEOLOGY
+        </DesktopText>
+      </ButtonInactive>
     </Flex>
   );
 };

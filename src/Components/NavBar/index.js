@@ -1,15 +1,25 @@
-import { Nav, Flex } from "./NavBar.styles";
-
-import { RiMenuFill } from "react-icons/ri";
+import { NavContainer, Flex, HamIcon, Nav } from "./NavBar.styles";
 
 const Navbar = () => {
   return (
-    <Nav>
+    <NavContainer>
       <Flex>
         <h1>THE PLANETS</h1>
-        <RiMenuFill style={{width: '30px', height: '30px'}}/>
+        <HamIcon />
+        <Nav>
+          <ul>
+            <li>Mercury</li>
+            <li>Venus</li>
+            <li>Earth</li>
+            <li>Mars</li>
+            <li>Jupiter</li>
+            <li>Saturn</li>
+            <li>Uranus</li>
+            <li>Neptune</li>
+          </ul>
+        </Nav>
       </Flex>
-    </Nav>
+    </NavContainer>
   );
 };
 
