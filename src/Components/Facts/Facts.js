@@ -1,11 +1,11 @@
-import {MenuDiv} from './Facts.styles'
+import {FactsDiv} from './Facts.styles'
 
 const Facts = ({ title, value }) => {
   return (
-    <MenuDiv>
+    <FactsDiv>
       <h3>{title}</h3>
       <h4>{value}</h4>
-    </MenuDiv>
+    </FactsDiv>
   );
 };
 

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import theme from "./../../theme";
 
-export const MenuDiv = styled.div`
+export const FactsDiv = styled.div`
   display: flex;
   border: 1px solid ${theme.colors.darkGray};
   height: 3rem;
@@ -35,5 +35,19 @@ export const MenuDiv = styled.div`
       font-size: 24px;
       letter-spacing: -0.056rem;
     }
+
+  }
+
+  @media (min-width: 1024px){
+      width: 210px;
+      height: auto;
+      padding: 21px 0 24px 20px;
+      h4{
+          font-size: 40px;
+      }
+      h3{
+          font-size: 11px;
+      }
+
   }
 `;

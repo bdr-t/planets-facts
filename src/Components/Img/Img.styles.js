@@ -20,5 +20,15 @@ export const ImgDiv = styled.div`
   }
   }
 
+  @media (min-width: 1024px){
+    grid-area: 2 / 1 / 4 / 2;
+    height: 600px;
+    img{
+      max-width: 450px;
+      max-height: 450px;
+    }
+    padding-left: 40px;
+  }
+
 
 `;

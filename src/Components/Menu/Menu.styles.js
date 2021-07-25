@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import theme from "../../theme"
+import theme from "../../theme";
 
 export const Flex = styled.div`
   display: flex;
@@ -14,6 +14,11 @@ export const Flex = styled.div`
     padding: 0 40px 0 0;
     border: none;
   }
+
+  @media (min-width: 1024px) {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
 `;
 
 export const ButtonActive = styled.button`
@@ -22,22 +27,26 @@ export const ButtonActive = styled.button`
   outline: none;
   font-size: 0.5625rem;
   font-weight: 600;
-  border:none;
+  border: none;
   letter-spacing: 2px;
   border-bottom: 4px solid ${theme.colors.purple};
   padding: 20px 4px;
 
-  span{
+  span {
     color: ${theme.colors.whiteAlpha50};
     margin-right: 0.5rem;
   }
-  
+
   @media (min-width: 768px) {
     padding: 15px;
     width: 280px;
     border: 1px solid ${theme.colors.darkGray};
     background-color: ${theme.colors.purple};
     text-align: start;
+  }
+  @media (min-width: 1024px) {
+    width: 350px;
+    font-size: 12px;
   }
 `;
 
@@ -51,7 +60,7 @@ export const ButtonInactive = styled.button`
   letter-spacing: 2px;
   padding: 20px 4px;
   border-bottom: 4px solid transparent;
-  span{
+  span {
     color: ${theme.colors.whiteAlpha50};
     margin-right: 0.5rem;
   }
@@ -60,20 +69,23 @@ export const ButtonInactive = styled.button`
     width: 280px;
     border: 1px solid ${theme.colors.darkGray};
     text-align: start;
-    color: ${theme.colors.white}
+    color: ${theme.colors.white};
+  }
+  @media (min-width: 1024px) {
+    width: 350px;
+    font-size: 12px;
   }
 `;
 
 export const MobileText = styled.p`
-@media (min-width: 768px) {
-  display: none;
-}
-`
+  @media (min-width: 768px) {
+    display: none;
+  }
+`;
 
 export const DesktopText = styled.p`
-display: none;
-@media (min-width: 768px) {
-  display: block;
-}
-
-`
+  display: none;
+  @media (min-width: 768px) {
+    display: block;
+  }
+`;

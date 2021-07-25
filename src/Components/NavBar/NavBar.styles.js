@@ -9,6 +9,10 @@ export const NavContainer = styled.div`
   @media (min-width: 768px) {
     padding: 32px 24px 27px 24px;
   }
+  @media (min-width: 1024px) {
+    padding: 0 40px 0 40px;
+    height: 85px;
+  }
 `;
 
 export const Flex = styled.div`
@@ -26,6 +30,12 @@ export const Flex = styled.div`
     justify-content: center;
     flex-direction: column;
     height: 100px;
+  }
+
+  @media (min-width: 1024px) {
+    flex-direction: row;
+    height: 85px;
+    justify-content: space-between;
   }
 `;
 
@@ -54,6 +64,12 @@ export const Nav = styled.nav`
       line-height: 25px;
       letter-spacing: 1px;
       color: ${theme.colors.whiteAlpha75};
+    }
+  }
+
+  @media (min-width: 1024px) {
+    ul {
+      margin: 0;
     }
   }
 `;
