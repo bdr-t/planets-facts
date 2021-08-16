@@ -33,7 +33,7 @@ const App = () => {
       <GlobalStyles />
       <Wrapper>
         <Container>
-          <NavBar handleChangePlanet={handleChangePlanet} planetDetails={planetDetails}/>
+          <NavBar handleChangePlanet={handleChangePlanet} planetDetails={planetDetails} planet={planetName} data={data}/>
           <Menu handleChangePosition={handleChangePosition} menuPosition={menuPosition} color={planetDetails.sectionColor}/>
           <Img menuPosition={menuPosition} planetDetails={planetDetails} />
           <Content planetDetails={planetDetails} menuPosition={menuPosition}/>

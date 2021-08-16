@@ -15,6 +15,14 @@ export const NavContainer = styled.div`
   }
 `;
 
+export const Li = styled.li`
+  border-top: ${(props) =>
+    props.active === 1 ? `7px solid ${props.color}` : `7px solid transparent`};
+  &:hover{
+    border-top: ${(props) => `7px solid ${props.color}`};
+  }
+`;
+
 export const Flex = styled.div`
   display: flex;
   align-items: center;
@@ -65,6 +73,9 @@ export const Nav = styled.nav`
       letter-spacing: 1px;
       color: ${theme.colors.whiteAlpha75};
       cursor: pointer;
+      display: flex;
+      align-items: center;
+      height: 82px;
     }
   }
 
