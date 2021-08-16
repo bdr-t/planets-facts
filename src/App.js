@@ -38,10 +38,10 @@ const App = () => {
           <Img menuPosition={menuPosition} planetDetails={planetDetails} />
           <Content planetDetails={planetDetails} menuPosition={menuPosition}/>
           <FactsContainer>
-            <Facts title={"ROTATION TIME"} value={"0.99 DAYS"} />
-            <Facts title={"REVOLUTION TIME"} value={"365.26 DAYS"} />
-            <Facts title={"RADIUS"} value={"6,371 KM"} />
-            <Facts title={"AVERAGE TEMP."} value={"16°C"} />
+            <Facts title={"ROTATION TIME"} value={planetDetails.rotation} />
+            <Facts title={"REVOLUTION TIME"} value={planetDetails.revolution} />
+            <Facts title={"RADIUS"} value={planetDetails.radius} />
+            <Facts title={"AVERAGE TEMP."} value={planetDetails.temperature} />
           </FactsContainer>
         </Container>
       </Wrapper>
