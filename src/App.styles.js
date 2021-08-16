@@ -2,7 +2,7 @@ import styled from "styled-components";
 import bk from "./assets/images/background-stars.svg";
 
 export const Container = styled.div`
-  max-width: 1440px;
+  max-width: 1536px;
   position: relative;
   min-height: 100vh;
   margin: auto;

@@ -64,6 +64,7 @@ export const Nav = styled.nav`
       line-height: 25px;
       letter-spacing: 1px;
       color: ${theme.colors.whiteAlpha75};
+      cursor: pointer;
     }
   }
 

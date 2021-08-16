@@ -6,24 +6,24 @@ import {
   DesktopText,
 } from "./Menu.styles";
 
-const Menu = () => {
+const Menu = ({handleChangePosition}) => {
   return (
     <Flex>
-      <ButtonActive>
+      <ButtonActive onClick={()=> handleChangePosition('overview')}>
         <MobileText>OVERVIEW</MobileText>
         <DesktopText>
           <span>01</span> OVERVIEW
         </DesktopText>
       </ButtonActive>
 
-      <ButtonInactive>
+      <ButtonInactive onClick={()=> handleChangePosition('structure')}>
         <MobileText>STRUCTURE</MobileText>
         <DesktopText>
           <span>02</span> INTERNAL STRUCTURE
         </DesktopText>
       </ButtonInactive>
       
-      <ButtonInactive>
+      <ButtonInactive onClick={()=> handleChangePosition('geology')}>
         <MobileText>SURFACE</MobileText>
         <DesktopText>
           <span> 03</span> SURFACE GEOLOGY

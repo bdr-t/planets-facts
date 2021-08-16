@@ -8,17 +8,35 @@ import Menu from "./Components/Menu/Menu";
 import Content from "./Components/Content/Content";
 import Facts from "./Components/Facts/Facts";
 import earth from "./assets/images/planet-earth.svg";
+import { useState, useEffect} from "react";
+import data from './assets/data'
 
 const App = () => {
+  const [planetName, setPlanetName] = useState("earth");
+  const [planetDetails, setPlanetDetails] = useState(data[planetName])
+  const [menuPosition, setMenuPosition] = useState('overview')
+
+  function handleChangePlanet(x) {
+    setPlanetName(x.toLocaleLowerCase());
+    setMenuPosition('overview')
+  }
+  function handleChangePosition(x) {
+    setMenuPosition(x.toLocaleLowerCase());
+  }
+
+  useEffect(() =>{
+      setPlanetDetails(data[planetName])
+  },[planetName])
+
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
       <Wrapper>
         <Container>
-          <NavBar />
-          <Menu />
-          <Img source={earth} />
-          <Content />
+          <NavBar handleChangePlanet={handleChangePlanet} planetDetails={planetDetails}/>
+          <Menu handleChangePosition={handleChangePosition} />
+          <Img menuPosition={menuPosition} planetDetails={planetDetails}/>
+          <Content planetDetails={planetDetails} menuPosition={menuPosition}/>
           <FactsContainer>
             <Facts title={"ROTATION TIME"} value={"0.99 DAYS"} />
             <Facts title={"REVOLUTION TIME"} value={"365.26 DAYS"} />

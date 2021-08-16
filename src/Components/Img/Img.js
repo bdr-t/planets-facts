@@ -1,9 +1,9 @@
 import { ImgDiv} from "./Img.styles";
 
-const Img = ({source}) => {
+const Img = ({planetDetails, menuPosition}) => {
   return (
     <ImgDiv>
-      <img src={source} alt="planet" />
+      <img src={planetDetails[menuPosition].image} alt="planet" />
     </ImgDiv>
   );
 };

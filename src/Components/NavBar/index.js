@@ -1,6 +1,8 @@
 import { NavContainer, Flex, HamIcon, Nav } from "./NavBar.styles";
+import {useEffect} from 'react'
 
-const Navbar = () => {
+const Navbar = ({handleChangePlanet}) => {
+
   return (
     <NavContainer>
       <Flex>
@@ -8,14 +10,14 @@ const Navbar = () => {
         <HamIcon />
         <Nav>
           <ul>
-            <li>Mercury</li>
-            <li>Venus</li>
-            <li>Earth</li>
-            <li>Mars</li>
-            <li>Jupiter</li>
-            <li>Saturn</li>
-            <li>Uranus</li>
-            <li>Neptune</li>
+            <li onClick={()=>handleChangePlanet('Mercury')}>Mercury</li>
+            <li onClick={()=>handleChangePlanet('Venus')}>Venus</li>
+            <li onClick={()=>handleChangePlanet('Earth')}>Earth</li>
+            <li onClick={()=>handleChangePlanet('Mars')}>Mars</li>
+            <li onClick={()=>handleChangePlanet('Jupiter')}>Jupiter</li>
+            <li onClick={()=>handleChangePlanet('Saturn')}>Saturn</li>
+            <li onClick={()=>handleChangePlanet('Uranus')}>Uranus</li>
+            <li onClick={()=>handleChangePlanet('Neptune')}>Neptune</li>
           </ul>
         </Nav>
       </Flex>
