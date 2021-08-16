@@ -34,7 +34,7 @@ const App = () => {
       <Wrapper>
         <Container>
           <NavBar handleChangePlanet={handleChangePlanet} planetDetails={planetDetails}/>
-          <Menu handleChangePosition={handleChangePosition} />
+          <Menu handleChangePosition={handleChangePosition} menuPosition={menuPosition}/>
           <Img menuPosition={menuPosition} planetDetails={planetDetails}/>
           <Content planetDetails={planetDetails} menuPosition={menuPosition}/>
           <FactsContainer>

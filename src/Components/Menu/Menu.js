@@ -1,34 +1,65 @@
 import {
   Flex,
-  ButtonActive,
-  ButtonInactive,
+  Btn,
   MobileText,
   DesktopText,
 } from "./Menu.styles";
 
-const Menu = ({handleChangePosition}) => {
+import { useState, useEffect} from "react";
+
+const Menu = ({ handleChangePosition, menuPosition}) => {
+  const [active, setActive] = useState(menuPosition);
+
+  function onClickOverview() {
+    handleChangePosition("overview");
+    setActive("overview");
+  }
+
+  function onClickStructure() {
+    handleChangePosition("structure");
+    setActive("structure");
+  }
+
+  function onClickGeology() {
+    handleChangePosition("geology");
+    setActive("geology");
+  }
+
+  useEffect(()=>{
+    setActive(menuPosition)
+    handleChangePosition(menuPosition);
+
+  }, [menuPosition, handleChangePosition])
+
   return (
     <Flex>
-      <ButtonActive onClick={()=> handleChangePosition('overview')}>
+      <Btn 
+      active={active === 'overview' ? 1 : 2}
+      onClick={() => onClickOverview("overview")}>
         <MobileText>OVERVIEW</MobileText>
         <DesktopText>
           <span>01</span> OVERVIEW
         </DesktopText>
-      </ButtonActive>
+      </Btn>
 
-      <ButtonInactive onClick={()=> handleChangePosition('structure')}>
+      <Btn
+        active={active === 'structure' ? 1 : 2}
+        onClick={() => onClickStructure("structure")}
+      >
         <MobileText>STRUCTURE</MobileText>
         <DesktopText>
           <span>02</span> INTERNAL STRUCTURE
         </DesktopText>
-      </ButtonInactive>
-      
-      <ButtonInactive onClick={()=> handleChangePosition('geology')}>
+      </Btn>
+
+      <Btn 
+      active={active === 'geology' ? 1 : 2}
+      onClick={() => onClickGeology("geology")}>
         <MobileText>SURFACE</MobileText>
         <DesktopText>
           <span> 03</span> SURFACE GEOLOGY
         </DesktopText>
-      </ButtonInactive>
+      </Btn>
     </Flex>
   );
 };

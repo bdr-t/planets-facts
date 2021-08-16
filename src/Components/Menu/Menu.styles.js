@@ -16,11 +16,45 @@ export const Flex = styled.div`
   }
 
   @media (min-width: 1024px) {
-    justify-content: flex-start;
+    justify-content: flex-end;
+    margin-bottom: 50px;
     align-items: flex-start;
   }
 `;
 
+export const Btn = styled.button`
+  color: ${({ active }) =>
+    active === 1 ? theme.colors.white : theme.colors.lightGray};
+  background-color: transparent;
+  outline: none;
+  border: none;
+  font-size: 0.5625rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  padding: 20px 4px;
+  border-bottom: ${({ active }) =>
+    active === 1 ? `4px solid ${theme.colors.purple}` : "none"};
+
+  span {
+    color: ${theme.colors.whiteAlpha50};
+    margin-right: 0.5rem;
+  }
+
+  @media (min-width: 768px) {
+    padding: 15px;
+    width: 280px;
+    border: 1px solid ${theme.colors.darkGray};
+    text-align: start;
+    color: ${theme.colors.white};
+    background-color: ${({ active }) =>
+      active === 1 ? theme.colors.purple : "trasnparent"};
+  }
+
+  @media (min-width: 1024px) {
+    width: 350px;
+    font-size: 12px;
+  }
+`;
 export const ButtonActive = styled.button`
   color: white;
   background-color: transparent;
@@ -64,6 +98,7 @@ export const ButtonInactive = styled.button`
     color: ${theme.colors.whiteAlpha50};
     margin-right: 0.5rem;
   }
+
   @media (min-width: 768px) {
     padding: 15px;
     width: 280px;
@@ -71,6 +106,7 @@ export const ButtonInactive = styled.button`
     text-align: start;
     color: ${theme.colors.white};
   }
+
   @media (min-width: 1024px) {
     width: 350px;
     font-size: 12px;
