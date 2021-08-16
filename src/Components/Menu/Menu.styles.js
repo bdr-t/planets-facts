@@ -46,8 +46,8 @@ export const Btn = styled.button`
     border: 1px solid ${theme.colors.darkGray};
     text-align: start;
     color: ${theme.colors.white};
-    background-color: ${({ active }) =>
-      active === 1 ? theme.colors.purple : "trasnparent"};
+    background-color: ${(props) =>
+      props.active === 1 ? props.color: "trasnparent"};
   }
 
   @media (min-width: 1024px) {

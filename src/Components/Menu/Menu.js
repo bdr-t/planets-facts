@@ -1,14 +1,11 @@
-import {
-  Flex,
-  Btn,
-  MobileText,
-  DesktopText,
-} from "./Menu.styles";
+import { Flex, Btn, MobileText, DesktopText } from "./Menu.styles";
 
-import { useState, useEffect} from "react";
+import { useState, useEffect } from "react";
 
-const Menu = ({ handleChangePosition, menuPosition}) => {
+const Menu = ({ handleChangePosition, menuPosition, color}) => {
   const [active, setActive] = useState(menuPosition);
+
+
 
   function onClickOverview() {
     handleChangePosition("overview");
@@ -25,17 +22,18 @@ const Menu = ({ handleChangePosition, menuPosition}) => {
     setActive("geology");
   }
 
-  useEffect(()=>{
-    setActive(menuPosition)
+  useEffect(() => {
+    setActive(menuPosition);
     handleChangePosition(menuPosition);
-
-  }, [menuPosition, handleChangePosition])
+  }, [menuPosition, handleChangePosition]);
 
   return (
     <Flex>
-      <Btn 
-      active={active === 'overview' ? 1 : 2}
-      onClick={() => onClickOverview("overview")}>
+      <Btn
+        color={color}
+        active={active === "overview" ? 1 : 2}
+        onClick={() => onClickOverview("overview")}
+      >
         <MobileText>OVERVIEW</MobileText>
         <DesktopText>
           <span>01</span> OVERVIEW
@@ -43,7 +41,8 @@ const Menu = ({ handleChangePosition, menuPosition}) => {
       </Btn>
 
       <Btn
-        active={active === 'structure' ? 1 : 2}
+        color={color}
+        active={active === "structure" ? 1 : 2}
         onClick={() => onClickStructure("structure")}
       >
         <MobileText>STRUCTURE</MobileText>
@@ -52,9 +51,11 @@ const Menu = ({ handleChangePosition, menuPosition}) => {
         </DesktopText>
       </Btn>
 
-      <Btn 
-      active={active === 'geology' ? 1 : 2}
-      onClick={() => onClickGeology("geology")}>
+      <Btn
+        color={color}
+        active={active === "geology" ? 1 : 2}
+        onClick={() => onClickGeology("geology")}
+      >
         <MobileText>SURFACE</MobileText>
         <DesktopText>
           <span> 03</span> SURFACE GEOLOGY

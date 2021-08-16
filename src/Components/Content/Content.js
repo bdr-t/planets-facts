@@ -1,7 +1,6 @@
 import {Container, ConentDiv, MoreInfoDiv, ExternalIcon, TextWraper } from "./Content.styles";
 
 const Content = ({planetDetails, menuPosition}) => {
-  console.log(planetDetails)
 
   return (
     <Container>
