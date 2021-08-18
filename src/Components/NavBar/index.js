@@ -1,18 +1,25 @@
 import { NavContainer, Flex, HamIcon, Nav, Li } from "./NavBar.styles";
 import { useEffect, useState } from "react";
+import Hamburger from "../Hamburger/Hamburger";
 
-const Navbar = ({ handleChangePlanet, planet, color, data }) => {
+const Navbar = ({ handleChangePlanet, planet, data }) => {
   const [active, setActive] = useState(planet);
+  const [isHamActive, setIsHamActive] = useState(false);
+
+  function handleClick(){
+    setIsHamActive(!isHamActive);
+  }
   
   useEffect(() =>{
     setActive(planet);
   },[planet])
 
   return (
-    <NavContainer>
+    <>
+    <NavContainer border={isHamActive ? 1: 2}>
       <Flex>
         <h1>THE PLANETS</h1>
-        <HamIcon />
+        <HamIcon onClick={()=> handleClick()} />
         <Nav>
           <ul>
             <Li
@@ -24,7 +31,6 @@ const Navbar = ({ handleChangePlanet, planet, color, data }) => {
             </Li>
             <Li
               color={data['venus'].sectionColor}
-              color={color}
               active={active === "venus" ? 1 : 2}
               onClick={() => handleChangePlanet("Venus")}
             >
@@ -76,6 +82,8 @@ const Navbar = ({ handleChangePlanet, planet, color, data }) => {
         </Nav>
       </Flex>
     </NavContainer>
+    {isHamActive && <Hamburger data={data}/>}
+    </>
   );
 };
 

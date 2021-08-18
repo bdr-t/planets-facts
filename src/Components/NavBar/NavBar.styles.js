@@ -4,7 +4,7 @@ import { RiMenuFill } from "react-icons/ri";
 
 export const NavContainer = styled.div`
   padding: 16px 24px;
-  border-bottom: 1px solid ${theme.colors.darkGray};
+  border-bottom: ${({border})=> border === 1 ? 'none' : `1px solid ${theme.colors.darkGray}` };
   grid-area: 1 / 1 / 2 / 3;
   @media (min-width: 768px) {
     padding: 32px 24px 27px 24px;
@@ -21,6 +21,8 @@ export const Li = styled.li`
   &:hover{
     border-top: ${(props) => `7px solid ${props.color}`};
   }
+  color: ${(props) =>
+    props.active === 1 ? 'white' : `${theme.colors.whiteAlpha75}`};
 `;
 
 export const Flex = styled.div`
@@ -71,7 +73,7 @@ export const Nav = styled.nav`
       text-transform: uppercase;
       line-height: 25px;
       letter-spacing: 1px;
-      color: ${theme.colors.whiteAlpha75};
+      /* color: ${theme.colors.whiteAlpha75}; */
       cursor: pointer;
       display: flex;
       align-items: center;
