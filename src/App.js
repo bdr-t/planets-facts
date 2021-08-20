@@ -10,6 +10,8 @@ import Facts from "./Components/Facts/Facts";
 import earth from "./assets/images/planet-earth.svg";
 import { useState, useEffect} from "react";
 import data from './assets/data'
+import Hamburger from "./Components/Hamburger/Hamburger";
+import Orbit from "./Components/Orbit/Orbit";
 
 const App = () => {
   const [planetName, setPlanetName] = useState("earth");
@@ -34,15 +36,17 @@ const App = () => {
       <Wrapper>
         <Container>
           <NavBar handleChangePlanet={handleChangePlanet} planetDetails={planetDetails} planet={planetName} data={data}/>
-          <Menu handleChangePosition={handleChangePosition} menuPosition={menuPosition} color={planetDetails.sectionColor}/>
+          {/* <Menu handleChangePosition={handleChangePosition} menuPosition={menuPosition} color={planetDetails.sectionColor}/>
           <Img menuPosition={menuPosition} planetDetails={planetDetails} />
           <Content planetDetails={planetDetails} menuPosition={menuPosition}/>
           <FactsContainer>
             <Facts title={"ROTATION TIME"} value={planetDetails.rotation} />
             <Facts title={"REVOLUTION TIME"} value={planetDetails.revolution} />
             <Facts title={"RADIUS"} value={planetDetails.radius} />
-            <Facts title={"AVERAGE TEMP."} value={planetDetails.temperature} />
-          </FactsContainer>
+            // <Facts title={"AVERAGE TEMP."} value={planetDetails.temperature} />
+          </FactsContainer> */}
+  
+          <Orbit/>
         </Container>
       </Wrapper>
     </ThemeProvider>
