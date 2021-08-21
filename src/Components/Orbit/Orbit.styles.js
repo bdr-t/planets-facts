@@ -31,8 +31,8 @@ export const Universe = styled.div`
   background-position: center 40%;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url(${flare});
-  opacity: 0.5;
+
+ 
 `;
 
 export const Galaxy = styled.div`
@@ -78,9 +78,6 @@ export const Pos = styled.div`
     100% {
       transform: rotateX(-90deg) rotateY(0deg) rotateZ(0deg);
     }
-  }
-  &:hover{
-    border: 1px solid white;
   }
 `;
 
@@ -128,7 +125,7 @@ export const Orbit = styled.div`
   position: absolute;
   top: 50%;
   left: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 0.5px solid rgba(255, 255, 255, 0.2);
   border-radius: 50%;
   animation-name: orbit;
   animation-iteration-count: infinite;
@@ -143,7 +140,6 @@ export const Orbit = styled.div`
       transform: rotateZ(-360deg);
     }
   }
-  
 `;
 
 export const MercuryOrbit = styled(Orbit)`
@@ -191,8 +187,8 @@ export const VenusPlanet = styled(Planet)`
 export const EarthOrbit = styled(Orbit)`
   width: 8.5em;
   height: 8.5em;
-  margin-top: -4em;
-  margin-left: -4em;
+  margin-top: -4.25em;
+  margin-left: -4.25em;
   animation-duration: 12s;
   font-size: 5em;
   z-index: 8;
@@ -217,7 +213,7 @@ export const MarsOrbit = styled(Orbit)`
   margin-left: -9em;
   animation-duration: 22s;
   font-size: 3em;
-  z-index:7;
+  z-index: 7;
 `;
 
 export const MarsPos = styled(Pos)`
@@ -288,7 +284,6 @@ export const UranusOrbit = styled(Orbit)`
   animation-duration: 700s;
   font-size: 6em;
   z-index: 3;
-
 `;
 
 export const UranusPos = styled(Pos)`
@@ -302,7 +297,6 @@ export const UranusPlanet = styled(Planet)`
   animation-duration: 700s;
   background-image: url(${uranusImage});
 `;
-
 
 export const NeptuneOrbit = styled(Orbit)`
   width: 18em;
@@ -319,13 +313,9 @@ export const NeptunePos = styled(Pos)`
   top: -1px;
   border: solid 3px red;
   animation-duration: 1000s;
-  &:hover{
-    animation-name: none ;
-  }
 `;
 
 export const NeptunePlanet = styled(Planet)`
   animation-duration: 1000s;
   background-image: url(${neptuneImage});
-  
 `;

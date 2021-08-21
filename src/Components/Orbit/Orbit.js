@@ -29,7 +29,7 @@ import {
     NeptunePlanet,
   } from "./Orbit.styles";
 
-const Orbit = () => {
+const Orbit = ({handleChangePlanet}) => {
   return (
     <Body>
       <Universe>
@@ -37,52 +37,52 @@ const Orbit = () => {
           <Sun />
           <MercuryOrbit>
             <MercuryPos>
-              <MercuryPlanet />
+              <MercuryPlanet onClick={() => handleChangePlanet("Mercury")}/>
             </MercuryPos>
           </MercuryOrbit>
 
           <VenusOrbit>
             <VenusPos>
-              <VenusPlanet />
+              <VenusPlanet onClick={() => handleChangePlanet("Venus")}  />
             </VenusPos>
           </VenusOrbit>
 
 
           <EarthOrbit>
             <EarthPos>
-              <EarthPlanet />
+              <EarthPlanet onClick={() => handleChangePlanet("Earth")}/>
             </EarthPos>
           </EarthOrbit>
 
 
           <MarsOrbit>
             <MarsPos>
-              <MarsPlanet />
+              <MarsPlanet  onClick={() => handleChangePlanet("Mars")}/>
             </MarsPos>
           </MarsOrbit>
 
 
           <JupiterOrbit>
             <JupiterPos>
-              <JupiterPlanet />
+              <JupiterPlanet onClick={() => handleChangePlanet("Jupiter")}/>
             </JupiterPos>
           </JupiterOrbit>
 
           <SaturnOrbit>
             <SaturnPos>
-              <SaturnPlanet />
+              <SaturnPlanet onClick={() => handleChangePlanet("Saturn")}/>
             </SaturnPos>
           </SaturnOrbit>
 
           <UranusOrbit>
             <UranusPos>
-              <UranusPlanet />
+              <UranusPlanet onClick={() => handleChangePlanet("Uranus")}/>
             </UranusPos>
           </UranusOrbit>
 
-          <NeptuneOrbit>
+          <NeptuneOrbit >
             <NeptunePos>
-              <NeptunePlanet/>
+              <NeptunePlanet onClick={() => handleChangePlanet("Neputne")}/>
             </NeptunePos>
           </NeptuneOrbit>
           
