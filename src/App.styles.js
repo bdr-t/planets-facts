@@ -41,3 +41,13 @@ export const Wrapper = styled.div`
   background: ${(props) => props.theme.colors.black};
   background-image: url(${bk});
 `;
+
+export const Button = styled.button`
+  position: absolute;
+  top: 15%;
+  right: 10%;
+  height: fit-content;
+  width: fit-content;
+  padding: 1em;
+  background-color: pink;
+`
