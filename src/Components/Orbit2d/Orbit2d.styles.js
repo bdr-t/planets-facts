@@ -97,6 +97,7 @@ export const MercuryOrbit = styled(Orbit)`
   margin-left: -7em;
   animation-duration: 3s;
   font-size: 1em;
+  z-index: 10;
 `;
 
 export const MercuryPlanet = styled(Planet)`

@@ -24,8 +24,8 @@ export const ImgDiv = styled.div`
     grid-area: 2 / 1 / 4 / 2;
     height: 600px;
     img{
-      max-width: 660px;
-      max-height: 660px;
+      max-width: 450px;
+      max-height: 450px;
     }
     padding-left: 40px;
   }

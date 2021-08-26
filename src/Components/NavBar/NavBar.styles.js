@@ -34,6 +34,7 @@ export const Flex = styled.div`
     font-size: 28px;
     font-family: "Antonio", sans-serif;
     letter-spacing: -1.05px;
+    cursor: pointer;
   }
 
   @media (min-width: 768px) {
