@@ -42,12 +42,13 @@ export const Wrapper = styled.div`
   background-image: url(${bk});
 `;
 
-export const Button = styled.button`
+export const Button = styled.div`
   position: absolute;
   top: 15%;
   right: 10%;
   height: fit-content;
   width: fit-content;
-  padding: 1em;
+  padding: 0.5em;
   background-color: pink;
+  z-index: 999;
 `
