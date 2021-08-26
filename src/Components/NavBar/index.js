@@ -82,7 +82,7 @@ const Navbar = ({ handleChangePlanet, planet, data, setHome }) => {
         </Nav>
       </Flex>
     </NavContainer>
-    {isHamActive && <Hamburger data={data}/>}
+    {isHamActive && <Hamburger data={data} handleChangePlanet={handleChangePlanet} setHamInactive={handleClick}/>}
     </>
   );
 };
