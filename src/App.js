@@ -20,7 +20,7 @@ const App = () => {
     data[planetName ? planetName : "earth"]
   );
   const [menuPosition, setMenuPosition] = useState("overview");
-  const [solarSystem, setSolarSystem] = useState("2d");
+  const [solarSystem, setSolarSystem] = useState("3d");
   function handleChangePlanet(x) {
     setPlanetName(x.toLocaleLowerCase());
     setMenuPosition("overview");

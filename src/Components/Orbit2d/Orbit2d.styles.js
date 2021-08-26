@@ -8,6 +8,7 @@ import jupiterImage from "../../assets/images/planet-jupiter.svg";
 import saturnImage from "../../assets/images/planet-saturn.svg";
 import uranusImage from "../../assets/images/planet-uranus.svg";
 import neptuneImage from "../../assets/images/planet-neptune.svg";
+import { asteroidsBackground } from './asteroidsBackground';
 
 import bk from "../../assets/images/background-stars.svg";
 import flare from "../../assets/images/flare.png";
@@ -56,7 +57,7 @@ export const Sun = styled(SunPlanet)`
   background-repeat: no-repeat;
   background-size: cover;
   box-shadow: 0 0 60px rgba(255, 160, 60, 0.4);
-  font-size: 12em;
+  font-size: 9em;
   background-image: url(${S});
 `;
 
@@ -70,7 +71,7 @@ export const Orbit = styled.div`
   position: absolute;
   top: 50%;
   left: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(102,166,229,0.12);
   border-radius: 50%;
   animation-name: orbit;
   animation-iteration-count: infinite;
@@ -91,12 +92,12 @@ export const Orbit = styled.div`
 `;
 
 export const MercuryOrbit = styled(Orbit)`
-  width: 14em;
-  height: 14em;
-  margin-top: -7em;
-  margin-left: -7em;
+  width: 20em;
+  height: 20em;
+  /* margin-top: -7em; */
+  /* margin-left: -7em; */
   animation-duration: 3s;
-  font-size: 1em;
+  font-size: 0.5em;
   z-index: 10;
 `;
 
@@ -108,12 +109,12 @@ export const MercuryPlanet = styled(Planet)`
 `;
 
 export const VenusOrbit = styled(Orbit)`
-  width: 6em;
-  height: 6em;
-  margin-top: -3em;
-  margin-left: -3em;
+  width: 13em;
+  height: 13em;
+  /* margin-top: -3em; */
+  /* margin-left: -3em; */
   animation-duration: 7s;
-  font-size: 3em;
+  font-size: 1em;
   z-index: 9;
 `;
 
@@ -125,12 +126,12 @@ export const VenusPlanet = styled(Planet)`
 `;
 
 export const EarthOrbit = styled(Orbit)`
-  width: 7.5em;
-  height: 7.5em;
-  margin-top: -3.75em;
-  margin-left: -3.75em;
+  width: 11em;
+  height: 11em;
+  /* margin-top: -3.75em; */
+  /* margin-left: -3.75em; */
   animation-duration: 12s;
-  font-size: 3em;
+  font-size: 1.5em;
   z-index: 8;
 `;
 
@@ -142,12 +143,12 @@ left: 0%;
 `;
 
 export const MarsOrbit = styled(Orbit)`
-  width: 15em;
-  height: 15em;
-  margin-top: -7.5em;
-  margin-left: -7.5em;
+  width: 16em;
+  height: 16em;
+  /* margin-top: -7.5em; */
+  /* margin-left: -7.5em; */
   animation-duration: 22s;
-  font-size: 2em;
+  font-size: 1.25em;
   z-index: 7;
 `;
 
@@ -159,12 +160,12 @@ left: 0%;
 `;
 
 export const JupiterOrbit = styled(Orbit)`
-  width: 7.5em;
-  height: 7.5em;
-  margin-top: -3.75em;
-  margin-left: -3.75em;
+  width: 11em;
+  height: 11em;
+  /* margin-top: -3.75em; */
+  /* margin-left: -3.75em; */
   animation-duration: 133s;
-  font-size: 5em;
+  font-size: 3em;
   z-index: 6;
 `;
 
@@ -177,12 +178,12 @@ left: 0%;
 
 export const SaturnOrbit = styled(Orbit)`
 
-  width: 8em;
-  height: 8em;
-  margin-top: -4em;
-  margin-left: -4em;
+  width: 10em;
+  height: 10em;
+  /* margin-top: -4em; */
+  /* margin-left: -4em; */
   animation-duration: 352s;
-  font-size: 6em;
+  font-size: 4em;
   z-index: 5;
 `;
 
@@ -198,10 +199,10 @@ left: 0%;
 `;
 
 export const UranusOrbit = styled(Orbit)`
-  width: 18em;
-  height: 18em;
-  margin-top: -9em;
-  margin-left: -9em;
+  width: 16em;
+  height: 16em;
+  /* margin-top: -9em; */
+  /* margin-left: -9em; */
   animation-duration: 700s;
   font-size: 3em;
   z-index: 3;
@@ -215,10 +216,10 @@ export const UranusPlanet = styled(Planet)`
 `;
 
 export const NeptuneOrbit = styled(Orbit)`
-  width: 20em;
-  height: 20em;
-  margin-top: -10em;
-  margin-left: -10em;
+  width: 18em;
+  height: 19em;
+  /* margin-top: -10em; */
+  /* margin-left: -10em; */
   animation-duration: 1000s;
   font-size: 3em;
   z-index: 2;
@@ -229,4 +230,41 @@ export const NeptunePlanet = styled(Planet)`
   background-image: url(${neptuneImage});
   left: 0%;
   top: 50%;
+`;
+
+
+export const AsteroidsBelt = styled.div`
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 1px solid rgba(102, 166, 229, 0.12);
+    border-radius: 1000px;
+    transform: translate(-50%, -50%);
+    height: 330px;
+    width: 330px;
+    opacity: 0.7;
+    border-color: transparent;
+
+    animation: orbit 179.9558282773s linear infinite;
+
+    &::before {
+        position: absolute;
+        content: '';
+        left: 50%;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        height: 210px;
+        width: 210px;
+        background: transparent;
+        border-radius: 140px !important;
+        box-shadow: ${asteroidsBackground};
+    }
+    @keyframes orbit {
+        0% {
+            transform: translate(-50%, -50%) rotate(0deg);
+        }
+        100% {
+            transform: translate(-50%, -50%) rotate(-360deg);
+        }
+    }
 `;

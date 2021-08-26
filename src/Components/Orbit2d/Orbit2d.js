@@ -19,14 +19,17 @@ import {
   UranusPlanet,
   NeptuneOrbit,
   NeptunePlanet,
+  AsteroidsBelt,
 } from "./Orbit2d.styles";
 
 const Orbit2d = ({ handleChangePlanet }) => {
   return (
+    <>
     <Body>
       <Universe>
         <Galaxy>
           <Sun />
+          
           <MercuryOrbit onClick={() => handleChangePlanet("Mercury")}>
             <MercuryPlanet />
           </MercuryOrbit>
@@ -60,7 +63,10 @@ const Orbit2d = ({ handleChangePlanet }) => {
           </NeptuneOrbit>
         </Galaxy>
       </Universe>
+      
     </Body>
+    <AsteroidsBelt/>
+    </>
   );
 };
 
